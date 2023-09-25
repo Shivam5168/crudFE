@@ -1,0 +1,24 @@
+<button routerLink="/post" class="table-button" >Add Data</button>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">FULL NAME</th>
+        <th scope="col">CONTACT</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">BLOOD GROUP</th>
+        <th scope="col">AGE</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of Employee">
+        <th>{{data.name}}</th>
+        <td>{{data.contact}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.bloodGroup}}</td>
+        <td>{{data.age}}</td>
+        <td><button class="table-button"  (click)="onEditEmployeeData(data._id)">Edit</button><button class="table-button"  (click)="onDeleteEmployeeData(data._id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+ 
